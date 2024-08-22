@@ -1,0 +1,16 @@
+.homepage {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .homepage-header {
+    background-color: #282c34;
+    padding: 20px;
+    color: white;
+  }
+  
+  .homepage-content {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+  }
