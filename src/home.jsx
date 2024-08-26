@@ -2,6 +2,8 @@
 
 export default function Home() {
   return (
-    <div><p>homeeeeeeeeeeeeeeeeeeeeeeê</p></div>
+    <div>
+      <h1>xin chao</h1>
+    </div>
   )
 }

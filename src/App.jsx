@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import './App.css';
 import Cookies from 'js-cookie';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Routes,Route } from 'react-router-dom';
 
+import './App.css';
+import Home from'./home';
 
 export default function App() {
   const [username, setUsername] = useState(''); 
@@ -38,13 +39,15 @@ export default function App() {
   useEffect(() => {
     console.log('token :', token) 
     if (token !== null && token !== undefined) {
-      navigate('/home'); 
+      navigate('Home'); 
     }
   }, [token,navigate]); 
 
   return (
     <>
-      <div>
+    <Routes>
+      <Route  path='/' element ={
+        <div>
         <div>
           <label htmlFor="username">Username</label>
           <input
@@ -67,6 +70,12 @@ export default function App() {
         {token && <p>Token: {token}</p>}
         {error && <p>{error}</p>}
       </div>
+      }>
+
+      </Route>
+
+<Route path='.home'  element ={<Home/>}></Route>
+    </Routes>
     </>
   );
 }
